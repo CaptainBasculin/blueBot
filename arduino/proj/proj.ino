@@ -43,15 +43,14 @@ void setup() {
    
   
   // --------------------------- Start Of The Calibration -------------------------
-  MyBlue.println("test 1");
   reflectanceSensors.init();
   unsigned long startTime = millis();
-  /*
+  
   while (millis() - startTime < 5000)  // make the calibration take 10 seconds
   {
     reflectanceSensors.calibrate();
   }
-  */
+  
   // ------------------- End Of The Calibration -----------------------
 
   MyBlue.println("Calibration done");
@@ -181,13 +180,13 @@ void loop() {
   if (mostLeftSensor() == 1 || mostRightSensor() == 1) {
     lineV = true;
   }
-  
+  /*
   if(MyBlue.available()){
     Serial.write(MyBlue.read());
   }
   if(Serial.available()){
     MyBlue.write(Serial.read());
-  }
+  }*/
   
   if (millis() > BT_check + 7500){
     //Bluetooth not connected for 15 seconds. Connection down, FORCE AUTO MODE
