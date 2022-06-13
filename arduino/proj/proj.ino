@@ -181,13 +181,13 @@ void loop() {
   if (mostLeftSensor() == 1 || mostRightSensor() == 1) {
     lineV = true;
   }
-  /*
+  
   if(MyBlue.available()){
     Serial.write(MyBlue.read());
   }
   if(Serial.available()){
     MyBlue.write(Serial.read());
-  }*/
+  }
   
   if (millis() > BT_check + 7500){
     //Bluetooth not connected for 15 seconds. Connection down, FORCE AUTO MODE
